@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="demo_model_view_tree" model="ir.ui.view">
+            <field name="name">demo.model.tree</field>
+            <field name="model">demo.model</field>
+            <field name="arch" type="xml">
+                <tree string="Demo objects">
+                    <field name="name"/>
+                    <field name="quantity" string="Quantity, kg"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

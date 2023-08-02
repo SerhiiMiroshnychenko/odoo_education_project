@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <menuitem id="edu_menu_root" name="Edu Module">
+            <menuitem id="edu_first_level_menu" name="Demo model">
+                <menuitem id="demo_model_menu_action_list"
+                          name="Demo objects List"
+                          action="demo_model_action"/>
+                <menuitem id="demo_model_menu_action_kanban"
+                          name="Demo objects Kanban"
+                          action="demo_model_action_kanban"/>
+            </menuitem>
+        </menuitem>
+    </data>
+</odoo>

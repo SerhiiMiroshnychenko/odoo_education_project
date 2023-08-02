@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="demo_model_action" model="ir.actions.act_window">
+            <field name="name">Demo Model</field>
+            <field name="res_model">demo.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="demo_model_action_kanban" model="ir.actions.act_window">
+            <field name="name">Demo Model Kanban</field>
+            <field name="res_model">demo.model</field>
+            <field name="view_mode">kanban</field>
+        </record>
+    </data>
+</odoo>

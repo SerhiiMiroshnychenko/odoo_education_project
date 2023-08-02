@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="demo_model_view_kanban" model="ir.ui.view">
+            <field name="name">demo.model.kanban</field>
+            <field name="model">demo.model</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="name"
+                        records_draggable="false"
+                >
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <h3><field name="name"/></h3>
+                                <hr/>
+                                <p><b><field name="quantity"/></b> kg</p>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

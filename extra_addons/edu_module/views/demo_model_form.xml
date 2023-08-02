@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="demo_model_view_form" model="ir.ui.view">
+            <field name="name">demo.model.form</field>
+            <field name="model">demo.model</field>
+            <field name="arch" type="xml">
+                <form string="Demo objects">
+                    <header>
+                        <h1>Object № <field name="id"/></h1>
+                    </header>
+                    <sheet>
+                        <p><b>Name: </b><field name="name"/></p>
+                        <p><b>Quantity, kg: </b><field name="quantity"/></p>
+                    </sheet>
+                </form>
+             </field>
+        </record>
+    </data>
+</odoo>
