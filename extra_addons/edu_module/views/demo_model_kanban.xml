@@ -7,12 +7,14 @@
                 <kanban default_group_by="name"
                         records_draggable="false"
                 >
+                    <field name="currency_id"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_global_click">
                                 <h3><field name="name"/></h3>
                                 <hr/>
-                                <p><b><field name="quantity"/></b> kg</p>
+                                <p><field name="quantity"/> kg for <field name="price"/></p>
+                                <p><b><field name="total_bill"/></b></p>
                             </div>
                         </t>
                     </templates>

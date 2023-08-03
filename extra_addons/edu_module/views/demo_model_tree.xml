@@ -6,7 +6,10 @@
             <field name="arch" type="xml">
                 <tree string="Demo objects">
                     <field name="name"/>
-                    <field name="quantity" string="Quantity, kg"/>
+                    <field name="price" string="Price"/>
+                    <field name="currency_id" invisible="true"/>
+                    <field name="quantity" string="Quantity, kg" sum="Sum"/>
+                    <field name="total_bill" string="Total bill" sum="Sum"/>
                 </tree>
             </field>
         </record>

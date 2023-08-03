@@ -10,6 +10,9 @@
                     </header>
                     <sheet>
                         <p><b>Name: </b><field name="name"/></p>
+                        <hr/>
+                        <p><b>Currency: </b><field name="currency_id"/></p>
+                        <p><b>Price: </b><field name="price"/></p>
                         <p><b>Quantity, kg: </b><field name="quantity"/></p>
                     </sheet>
                 </form>
