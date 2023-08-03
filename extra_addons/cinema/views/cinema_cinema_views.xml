@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cinema_cinema_form_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.form.view</field>
+            <field name="model">cinema.cinema</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1 class="d-flex flex-row">
+                                <field name="name" class="o_text_overflow" placeholder="e.g. Cinema city"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="number_of_stuff"/>
+                                <field name="square_space"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="cinema_cinema_tree_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.tree.view</field>
+            <field name="model">cinema.cinema</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="state"/>
+                    <field name="number_of_stuff"/>
+                    <field name="square_space"/>
+                </tree>
+            </field>
+        </record>
+        <record id="cinema_cinema_search_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.search.view</field>
+            <field name="model">cinema.cinema</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="number_of_stuff"/>
+                    <field name="square_space"/>
+                </search>
+            </field>
+        </record>
+        <record id="action_cinema_cinema" model="ir.actions.act_window">
+            <field name="name">Cinema</field>
+            <field name="res_model">cinema.cinema</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="cinema_cinema_tree_view"/>
+            <field name="search_view_id" ref="cinema_cinema_search_view"/>
+        </record>
+
+        <menuitem name="Cinema"
+                  id="menu_cinema_cinema_main"
+        />
+        <menuitem name="Cinema"
+                  id="menu_cinema_cinema"
+                  parent="menu_cinema_cinema_main"
+                  action="action_cinema_cinema"
+        />
+    </data>
+</odoo>
