@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cinema_cinema_hall_form_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.hall.form.view</field>
+            <field name="model">cinema.cinema.hall</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1 class="d-flex flex-row">
+                                <field name="name" class="o_text_overflow" placeholder="e.g. Cinema hall"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="seats"/>
+                                <field name="cinema_id"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="cinema_cinema_hall_tree_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.hall.tree.view</field>
+            <field name="model">cinema.cinema.hall</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="seats"/>
+                    <field name="cinema_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="cinema_cinema_hall_search_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.hall.search.view</field>
+            <field name="model">cinema.cinema.hall</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="seats"/>
+                    <field name="cinema_id"/>
+                </search>
+            </field>
+        </record>
+        <record id="action_cinema_cinema_hall" model="ir.actions.act_window">
+            <field name="name">Hall</field>
+            <field name="res_model">cinema.cinema.hall</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="cinema_cinema_hall_tree_view"/>
+            <field name="search_view_id" ref="cinema_cinema_hall_search_view"/>
+        </record>
+    </data>
+</odoo>

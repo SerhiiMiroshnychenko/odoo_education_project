@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cinema_cinema_movie_form_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.movie.form.view</field>
+            <field name="model">cinema.cinema.movie</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1 class="d-flex flex-row">
+                                <field name="name" class="o_text_overflow" placeholder="e.g. Movie's title"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="premiere_date"/>
+                                <field name="deadline_date"/>
+                            </group>
+                            <group>
+                                <field name="color" options="{'color_field': 'color'}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="cinema_cinema_movie_tree_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.movie.tree.view</field>
+            <field name="model">cinema.cinema.movie</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="premiere_date"/>
+                    <field name="deadline_date"/>
+                </tree>
+            </field>
+        </record>
+        <record id="cinema_cinema_movie_search_view" model="ir.ui.view">
+            <field name="name">cinema.cinema.movie.search.view</field>
+            <field name="model">cinema.cinema.movie</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        <record id="action_cinema_cinema_movie" model="ir.actions.act_window">
+            <field name="name">Movie</field>
+            <field name="res_model">cinema.cinema.movie</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="cinema_cinema_movie_tree_view"/>
+            <field name="search_view_id" ref="cinema_cinema_movie_search_view"/>
+        </record>
+    </data>
+</odoo>

@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_cinema_cinema_user,access_cinema_cinema_user,model_cinema_cinema,,1,1,1,1
+access_cinema_cinema_hall_user,access_cinema_cinema_hall_user,model_cinema_cinema_hall,,1,1,1,1
+access_cinema_cinema_movie_user,access_cinema_cinema_movie_user,model_cinema_cinema_movie,,1,1,1,1

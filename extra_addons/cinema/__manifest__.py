@@ -14,6 +14,11 @@
     'data': [
         'security/ir.model.access.csv',
         'views/cinema_cinema_views.xml',
+        'views/cinema_cinema_hall_views.xml',
+        'views/cinema_cinema_movie_views.xml',
 
     ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }

@@ -22,7 +22,29 @@
                             <group>
                                 <field name="number_of_stuff"/>
                                 <field name="square_space"/>
+                                <field name="restaurant"/>
                             </group>
+                            <notebook>
+                                <page string="Description">
+                                    <group>
+                                        <field name="description"/>
+                                    </group>
+                                </page>
+                                <page string="Halls">
+                                    <group>
+                                        <field name="hall_ids"
+                                               string=""
+                                        />
+                                    </group>
+                                </page>
+                                <page string="Movies">
+                                    <group>
+                                        <field name="movie_ids"
+                                               string=""
+                                        />
+                                    </group>
+                                </page>
+                            </notebook>
                         </group>
                     </sheet>
                     <div class="oe_chatter">
@@ -42,6 +64,12 @@
                     <field name="state"/>
                     <field name="number_of_stuff"/>
                     <field name="square_space"/>
+                    <field name="restaurant"/>
+                    <field name="hall_ids"/>
+                    <field name="total_seats"/>
+                    <field name="movie_ids"
+                           widget="many2many_tags"
+                           options="{'color_field': 'color'}"/>
                 </tree>
             </field>
         </record>
