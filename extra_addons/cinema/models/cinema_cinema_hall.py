@@ -1,21 +1,12 @@
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 
 class CinemaCinemaHall(models.Model):
     _name = 'cinema.cinema.hall'
 
-    name = fields.Char(
-        string="Cinema hall name",
-        required=True,
-    )
-
+    name = fields.Char(string="Cinema hall name", required=True)
     seats = fields.Integer(required=True)
+    cinema_id = fields.Many2one('cinema.cinema', required=True, ondelete='cascade')
 
-    cinema_id = fields.Many2one(
-        'cinema.cinema',
-        required=True,
-        ondelete='cascade',
-        inverse_name='hall_ids'
-    )
-
-
+    movie_ids = fields.Many2many('cinema.cinema.movie')

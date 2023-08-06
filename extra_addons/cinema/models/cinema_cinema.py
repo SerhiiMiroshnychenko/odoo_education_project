@@ -48,7 +48,3 @@ class CinemaCinema(models.Model):
     movie_ids = fields.Many2many(
         'cinema.cinema.movie',
         states={'close': [('invisible', True)]})
-
-
-
-

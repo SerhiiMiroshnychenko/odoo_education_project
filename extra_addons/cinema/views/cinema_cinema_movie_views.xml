@@ -33,6 +33,7 @@
                     <field name="name"/>
                     <field name="premiere_date"/>
                     <field name="deadline_date"/>
+                    <field name="cinema_ids" widget="many2many_tags"/>
                 </tree>
             </field>
         </record>

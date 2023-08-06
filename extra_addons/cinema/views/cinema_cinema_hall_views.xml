@@ -15,9 +15,10 @@
                         <group>
                             <group>
                                 <field name="seats"/>
-                                <field name="cinema_id"/>
+                                <field name="movie_ids"
+                           widget="many2many_tags"
+                           options="{'color_field': 'color'}"/>
                             </group>
-
                         </group>
                     </sheet>
                 </form>
@@ -30,7 +31,9 @@
                 <tree>
                     <field name="name"/>
                     <field name="seats"/>
-                    <field name="cinema_id"/>
+                    <field name="movie_ids"
+                           widget="many2many_tags"
+                           options="{'color_field': 'color'}"/>
                 </tree>
             </field>
         </record>
